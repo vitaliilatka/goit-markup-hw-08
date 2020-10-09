@@ -1,0 +1,40 @@
+.feature {
+    padding-top: 94px;
+    padding-bottom: 0;
+}
+  
+.feature-list__item {
+    flex-basis: calc((100% - 3 * 30px) / 4);
+  
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+}
+  
+.feature-list__thumb {
+    @include flexbox(center, center);
+    margin-bottom: 30px;
+    height: 120px;
+    background-color: $secohd-bg-color;
+    border-radius: 4px;
+}
+  
+.feature-list__icon {
+    width: 70px;
+    height: 70px;
+}
+  
+.feature-list__title {
+    margin-top: 0;
+    margin-bottom: 10px;
+  
+    @include font(14px, 1.14, 700);
+    text-transform: uppercase;
+}
+  
+.feature-list__text {
+    margin-top: 0;
+    margin-bottom: 0;
+  
+    color: $second-text-color;
+}

@@ -1,0 +1,25 @@
+.clients-list__item {
+    flex-basis: calc((100% - 5 * 30px) / 6);
+  
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+}
+  
+.clients-list__link {
+    @include flexbox(center, center);
+  
+    height: 90px;
+    border: 1px solid $icon-color;
+    border-radius: 4px;
+    fill: $icon-color;
+  
+    transition: border-color $duration $timing-function,
+      fill $duration $timing-function;
+  
+    &:hover,
+    &:focus {
+      border-color: $accent-color;
+      fill: $accent-color;
+    }
+}

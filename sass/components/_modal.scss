@@ -1,0 +1,21 @@
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 528px;
+    height: 581px;
+  
+    padding: 40px 0;
+    background-color: $main-bg-color;
+    border-radius: 4px;
+  
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform $duration $timing-function;
+}
+
+.modal__text {
+    display: block;
+    margin-bottom: 12px;
+    @include font(20px, 1.15, 700);
+    text-align: center;
+}

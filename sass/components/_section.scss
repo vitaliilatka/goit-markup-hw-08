@@ -1,0 +1,17 @@
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+  
+.section__title {
+    margin-top: 0;
+    margin-bottom: 50px;
+  
+    @include font(36px, 1.17, 700);
+    text-align: center;
+}
+  
+.section--gray {
+    background-color: $secohd-bg-color;
+    text-align: center;
+}

@@ -1,0 +1,17 @@
+.logo {
+    font-family: $logo-font;
+    @include font (26px, 1.19, 700);
+}
+.logo--black {
+    margin-right: 93px;
+    color: #000000;
+    letter-spacing: 0.03em;
+}
+  
+.logo--accent {
+    color: $accent-color;
+}
+  
+.logo--white {
+    color: $main-bg-color;
+}
