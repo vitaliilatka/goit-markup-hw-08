@@ -8,52 +8,72 @@
             href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" 
             rel="stylesheet"
         />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.7.0/modern-normalize.min.css"
-        />
-        <link rel="stylesheet" href="./css/main.min.css" />
+        <link rel="stylesheet" href="./css/main.min.css"/>
     </head>
     <body>
         <!--Header-->
         <header class="header">
-            <div class="container flex flex--ai-center">
-                <nav class="flex flex--ai-center">
-                    <a class="link logo logo--black" href="./index.html">
-                        <span class="logo--accent">Web</span>Studio
-                    </a>
-                    <ul class="list header-nav">
-                        <li class="header-nav__item">
-                            <a class="link header-nav__link header-nav__link--accent" href="./index.html">Студия</a>
+            <div class="container flex flex--header">
+                <a class="link logo logo--black" href="./index.html">
+                    <span class="logo--accent">Web</span>Studio
+                </a>
+                <div class="menu-container" id="menu-container" data-menu>
+                    <nav>
+                        <ul class="list header-nav">
+                            <li class="header-nav__item">
+                                <a class="link header-nav__link header-nav__link--accent" href="./index.html">Студия</a>
+                            </li>
+                            <li class="header-nav__item">
+                                <a class="link header-nav__link" href="./portfolio.html">Портфолио</a>
+                            </li>
+                            <li class="header-nav__item">
+                                <a class="link header-nav__link" href="#">Контакты</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <ul class="list header-contacts">
+                        <li class="header-contacts__item">
+                            <a class="link header-contacts__link" href="mailto:info@devstudio.com">
+                                <svg class="header-contacts__icon" width="16" height="12">
+                                    <use href="./images/svg/sprite.svg#icon-envelope">
+                                    </use>
+                                </svg>
+                                info@devstudio.com
+                            </a>
                         </li>
-                        <li class="header-nav__item">
-                            <a class="link header-nav__link" href="./portfolio.html">Портфолио</a>
-                        </li>
-                        <li class="header-nav__item">
-                            <a class="link header-nav__link" href="#">Контакты</a>
+                        <li class="header-contacts__item">
+                            <a class="link header-contacts__link" href="tel:+380961111111">
+                                <svg class="header-contacts__icon" width="10" height="16">
+                                    <use href="./images/svg/sprite.svg#icon-smartphone">
+                                    </use>
+                                </svg>
+                                +38 096 111 11 11
+                            </a>
                         </li>
                     </ul>
-                </nav>
-                <ul class="list header-contacts">
-                    <li class="header-contacts__item">
-                        <a class="link header-contacts__link" href="mailto:info@devstudio.com">
-                            <svg class="header-contacts__icon" width="16" height="12">
-                                <use href="./images/svg/sprite.svg#icon-envelope">
-                                </use>
-                            </svg>
-                            info@devstudio.com
-                        </a>
-                    </li>
-                    <li class="header-contacts__item">
-                        <a class="link header-contacts__link" href="tel:+380961111111">
-                            <svg class="header-contacts__icon" width="10" height="16">
-                                <use href="./images/svg/sprite.svg#icon-smartphone">
-                                </use>
-                            </svg>
-                            +38 096 111 11 11
-                        </a>
-                    </li>
-                </ul>
+                </div>
+                <button
+                    type="button"
+                    class="button-menu"
+                    aria-expanded="false"
+                    aria-controls="menu-container"
+                    data-menu-button
+                >
+                    <svg
+                        width="40"
+                        height="40"
+                        aria-label="Переключатель мобильного меню"
+                    >
+                        <use
+                            class="icon-burger"
+                            href=""
+                        ></use>
+                        <use
+                            class="icon-cross"
+                            href=""
+                        ></use>
+                    </svg>   
+                </button>     
             </div>
         </header>
         <main>
@@ -63,12 +83,12 @@
                 <button class="button-primary" data-modal-open>Заказать услугу</button>
             </section>
             <!--Advanteges-->
-            <section class="section feature">
+            <section class="feature">
                 <div class="container">
                     <h2 class="visually-hidden">
                         Преимущества
                     </h2>
-                    <ul class="list flex feature-list">
+                    <ul class="list feature-list">
                         <li class="feature-list__item">
                             <div class="feature-list__thumb">
                                 <svg class="feature-list__icon">
@@ -121,24 +141,32 @@
                 </div>
             </section>
             <!--Example projects-->
-            <section class="section">
+            <section class="section examples">
                 <div class="container">
                     <h2 class="section__title">Чем мы занимаемся</h2>
-                    <ul class="list flex examples-list">
-                        <!-- <h3>Desktop applications</h3> -->
+                    <ul class="list examples-list">
+                        <!--Desktop applications-->
                         <li class="examples-list__item">
                             <img
+                                srcset="
+                                    ./images 1x,
+                                    ./images 2x
+                                "
                                 src="./images/skills1.jpg"
-                                alt="notebook"
+                                alt="Работа с планшетом"
                                 width="370"
                             />
                             <div class="examples-list__thumb">
                                 <h3 class="examples-list__text">Десктопные приложения</h3>
                             </div>
                         </li>
-                        <!-- <h3>Mobile applications</h3> -->
+                        <!--Mobile applications-->
                         <li class="examples-list__item">
                             <img
+                                srcset="
+                                    ./images 1x,
+                                    ./images 2x
+                                "
                                 src="./images/skills2.jpg"
                                 alt="smartphone"
                                 width="370"
@@ -150,6 +178,10 @@
                         <!-- <h3>Designer solutions</h3> -->
                         <li class="examples-list__item">
                             <img
+                                srcset="
+                                ./images 1x,
+                                ./images 2x
+                                "
                                 src="./images/skills3.jpg"
                                 alt="Tablet"
                                 width="370"
@@ -165,14 +197,36 @@
             <section class="section section--gray">
                 <div class="container">
                     <h2 class="section__title">Наша команда</h2>
-                    <ul class="list flex team-list">
+                    <ul class="list team-list">
                         <!--First employer-->
                         <li class="team-list__item">
-                            <img
-                                src="./images/team1.jpg"
-                                alt="Igor Demiyanenko"
-                                width="270"
-                            />
+                            <picture>
+                                <source
+                                    srcset="
+                                    ./images 1x,
+                                    ./images 2x
+                                    "
+                                    media="(min-width: 1200px)"
+                                />
+                                <source
+                                    srcset="
+                                    ./images 1x,
+                                    ./images 2x
+                                    "
+                                    media="(min-width: 768px)"
+                                />
+                                <source
+                                    srcset="
+                                    ./images 1x,
+                                    ./images 2x
+                                    "
+                                    media="(max-width: 767px)"
+                                />
+                                <img
+                                    src="./images/team1.jpg"
+                                    alt="Igor Demiyanenko"
+                                />
+                            </picture>
                             <h3 class="team-list__title">Игорь Демьяненко</h3>
                             <p class="team-list__text">Product Designer</p>
                             <ul class="list flex network-list--centered">
@@ -208,14 +262,36 @@
                         </li>
                         <!--Second employer-->
                         <li class="team-list__item">
-                            <img
-                                src="./images/team2.jpg"
-                                alt="Olga Repina"
-                                width="270"
-                            />
+                            <picture>
+                                <source
+                                    srcset="
+                                        ./images 1x,
+                                        ./images 2x
+                                    "
+                                    media="(min-width: 1200px)"
+                                />
+                                <source
+                                    srcset="
+                                        ./images 1x,
+                                        ./images 2x
+                                    "
+                                    media="(min-width: 768px)"
+                                />
+                                <source
+                                    srcset="
+                                    ./images 1x,
+                                    ./images 2x
+                                    "
+                                    media="(max-width: 767px)"
+                                />
+                                <img
+                                    src="./images/team2.jpg"
+                                    alt="Olga Repina"
+                                />
+                            </picture>
                             <h3 class="team-list__title">Ольга Репина</h3>
                             <p class="team-list__text">Frontend Developer</p>
-                            <ul class="list flex network-list network-list--centered">
+                            <ul class="list network-list">
                                 <li class="network-list__item">
                                     <a href="#" class="link network-list__link" aria-label="Instagram">
                                         <svg class="network-list__icon">
@@ -248,14 +324,36 @@
                         </li>
                         <!--Third employer-->
                         <li class="team-list__item">
-                            <img
-                                src="./images/team3.jpg"
-                                alt="Nikolaj Tarasov"
-                                width="270"
-                            />
+                            <picture>
+                                <source
+                                    srcset="
+                                    ./images 1x,
+                                    ./images 2x
+                                    "
+                                    media="(min-width: 1200px)"
+                                />
+                                <source
+                                    srcset="
+                                    ./images 1x,
+                                    ./images 2x
+                                    "
+                                    media="(min-width: 768px)"
+                                />
+                                <source
+                                    srcset="
+                                    ./images 1x,
+                                    ./images 2x
+                                    "
+                                    media="(max-width: 767px)"
+                                />
+                                <img
+                                    src="./images/team3.jpg"
+                                    alt="Nikolaj Tarasov"
+                                />
+                            </picture>
                             <h3 class="team-list__title">Николай Тарасов</h3>
                             <p class="team-list__text">Marketing</p>
-                            <ul class="list flex network-list network-list--centered">
+                            <ul class="list network-list">
                                 <li class="network-list__item">
                                     <a href="#" class="link network-list__link" aria-label="Instagram">
                                         <svg class="network-list__icon">
@@ -288,14 +386,36 @@
                         </li>
                         <!--Fourth employer-->
                         <li class="team-list__item">
-                            <img
-                                src="./images/team4.jpg"
-                                alt="Mihail Ermakov"
-                                width="270"
-                            />
+                            <picture>
+                                <source
+                                    srcset="
+                                    ./images 1x,
+                                    ./images 2x
+                                    "
+                                    media="(min-width: 1200px)"
+                                />
+                                <source
+                                    srcset="
+                                    ./images 1x,
+                                    ./images 2x
+                                    "
+                                    media="(min-width: 768px)"
+                                />
+                                <source
+                                    srcset="
+                                    ./images 1x,
+                                    ./images 2x
+                                    "
+                                    media="(max-width: 767px)"
+                                />
+                                <img
+                                    src="./images/team4.jpg"
+                                    alt="Mihail Ermakov"
+                                />
+                            </picture>
                             <h3 class="team-list__title">Михаил Ермаков</h3>
                             <p class="team-list__text">UI Designer</p>
-                            <ul class="list flex network-list network-list--centered">
+                            <ul class="list network-list">
                                 <li class="network-list__item">
                                     <a href="#" class="link network-list__link" aria-label="Instagram">
                                         <svg class="network-list__icon">
@@ -333,7 +453,7 @@
             <section class="section">
                 <div class="container">
                     <h2 class="section__title">Постоянные клиенты</h2>
-                    <ul class="list flex clients-list">
+                    <ul class="list clients-list">
                         <li class="clients-list__item">
                             <a href="#" class="link clients-list__link">
                                 <svg width="44" height="50">
