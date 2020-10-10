@@ -13,6 +13,7 @@
     width: 100%;
     height: 100%;
     background-color: rgba(33, 150, 243, 0.9);
+    opacity: 0;
   
     transform: translateY(100%);
     transition: transform $duration $timing-function;
@@ -22,6 +23,9 @@
     margin: 0;
     @include font(18px, 1.56);
     color: $main-bg-color;
+    @media (max-width: 330px) {
+        font-size: 16px;
+    }
 }
   
 .portfolio-card__content {

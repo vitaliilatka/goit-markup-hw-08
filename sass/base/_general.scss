@@ -33,13 +33,3 @@ body {
     clip: rect(0 0 0 0);
     overflow: hidden;
   }
-  
-  .container {
-    width: 1200px;
-    margin: 0px auto;
-    padding: 0px 15px;
-  }
-  
-  .flex {
-    @include flexbox;
-  }

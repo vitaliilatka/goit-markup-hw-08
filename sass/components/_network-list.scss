@@ -1,8 +1,7 @@
-.network-list--centered {
-    margin-bottom: 30px;
-    justify-content: center;
+.network-list {
+  @include flexbox(center, center);
 }
-  
+ 
 .network-list__item {
     &:not(:last-child) {
       margin-right: 10px;
