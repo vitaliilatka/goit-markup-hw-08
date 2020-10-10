@@ -502,51 +502,53 @@
         </main>
         <!--Footer-->
         <footer class="footer">
-            <div class="container flex flex--baseline">
-                <div class="footer-address">
-                    <a class="link logo logo--white" href="./index.html">
-                        <span class="logo--accent">Web</span>Studio
-                    </a>
-                    <address class="footer-contacts">
-                        <p class="footer-contacts__text">г. Киев, пр-т Леси Украинки, 26</p>
-                        <a class="link footer-contacts__link" href="mailto:info@example.com">
-                            info@example.com
+            <div class="container flex flex--desktop">
+                <div class="flex-tablet">
+                    <div class="footer-address">
+                        <a class="link logo logo--white" href="./index.html">
+                            <span class="logo--accent">Web</span>Studio
                         </a>
-                        <a class="link footer-contacts__link" href="tel:+380991111111">+38 099 111 11 11</a>
-                    </address>
-                </div>
-                <div class="footer-networks">
-                    <strong class="footer-networks__text">присоединяйтесь</strong>
-                    <ul class="list flex network-list">
-                        <li class="network-list__item">
-                            <a href="#" class="link network-list__link network-list__link--dark" aria-label="Instagram">
-                                <svg class="network-list__icon">
-                                    <use href="./images/svg/sprite.svg#icon-instagram"></use>
-                                </svg>
+                        <address class="footer-contacts">
+                            <p class="footer-contacts__text">г. Киев, пр-т Леси Украинки, 26</p>
+                            <a class="link footer-contacts__link" href="mailto:info@example.com">
+                                info@example.com
                             </a>
-                        </li>
-                        <li class="network-list__item">
-                            <a href="#" class="link network-list__link network-list__link--dark" aria-label="Twitter">
-                                <svg class="network-list__icon">
-                                    <use href="./images/svg/sprite.svg#icon-twitter"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="network-list__item">
-                            <a href="#" class="link network-list__link network-list__link--dark" aria-label="Facebook">
-                                <svg class="network-list__icon">
-                                    <use href="./images/svg/sprite.svg#icon-facebook"></use>
-                                </svg>
-                            </a>
-                        </li>
-                        <li class="network-list__item">
-                            <a href="#" class="link network-list__link network-list__link--dark" aria-label="Linkedin">
-                                <svg class="network-list__icon">
-                                    <use href="./images/svg/sprite.svg#icon-linkedin"></use>
-                                </svg>
-                            </a>
-                        </li>
-                    </ul>
+                            <a class="link footer-contacts__link" href="tel:+380991111111">+38 099 111 11 11</a>
+                        </address>
+                    </div>
+                    <div class="footer-networks">
+                        <strong class="footer-networks__text">присоединяйтесь</strong>
+                        <ul class="list network-list">
+                            <li class="network-list__item">
+                                <a href="#" class="link network-list__link network-list__link--dark" aria-label="Instagram">
+                                    <svg class="network-list__icon">
+                                        <use href="./images/svg/sprite.svg#icon-instagram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="network-list__item">
+                                <a href="#" class="link network-list__link network-list__link--dark" aria-label="Twitter">
+                                    <svg class="network-list__icon">
+                                        <use href="./images/svg/sprite.svg#icon-twitter"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="network-list__item">
+                                <a href="#" class="link network-list__link network-list__link--dark" aria-label="Facebook">
+                                    <svg class="network-list__icon">
+                                        <use href="./images/svg/sprite.svg#icon-facebook"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="network-list__item">
+                                <a href="#" class="link network-list__link network-list__link--dark" aria-label="Linkedin">
+                                    <svg class="network-list__icon">
+                                        <use href="./images/svg/sprite.svg#icon-linkedin"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
                 <form class="flex footer-subscribe" autocomplete="off">
                     <label class="footer-subscribe__label">
@@ -558,7 +560,7 @@
                             placeholder="E-mail"
                         />
                     </label>
-                    <button type="submit" class="button-primary button-primary--flex">
+                    <button type="submit" class="button-primary button-primary--flex button-primary--centered">
                         Подписаться
                         <svg class="footer-subscribe__icon" width="24" height="24">
                             <use href="./images/svg/sprite.svg#icon-subscribe"></use>
@@ -569,7 +571,7 @@
         </footer>
         <div class="backdrop backdrop--hidden" data-modal>
             <div class="modal">
-                <button class="button-close" data-modal-close>
+                <button type="button" class="button-close" data-modal-close>
                     <svg width="11" height="11">
                         <use href="./images/svg/sprite.svg#icon-close-modal"></use>
                     </svg>
@@ -638,10 +640,11 @@
                             <a href="#" class="form-data__policy-label--accent">Условия договора</a>
                         </label>
                     </div>
-                    <button type="submit" class="button-primary button-primary--modal">Отправить</button>
+                    <button type="submit" class="button-primary button-primary--modal--centered">Отправить</button>
                 </form>
             </div>
         </div>
         <script src="./js/modal.js"></script>
+        <script src="./js/burger.js"></script>
     </body>
 </html>
